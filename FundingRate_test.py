@@ -14,7 +14,7 @@ interval = "1h"
 
 # Get the current funding rate
 funding_rate = client.futures_funding_rate(symbol=symbol, interval=interval)
-print(funding_rate)
+print(funding_rate[0])
 # Set the thresholds for buying and selling
 buy_threshold = 0.001
 sell_threshold = -0.001
