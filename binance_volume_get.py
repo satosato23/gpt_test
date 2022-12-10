@@ -17,7 +17,7 @@ for ticker in all_tickers:
         one_hour_volume=float(pair["volume"])/24
         for kline in klines:
             ago_volume=kline[5]
-        if one_hour_volume/float(ago_volume) >10:
+        if one_hour_volume/float(ago_volume) *100 >50:
             print(symbol+" 24時間の出来高"+pair["volume"]+"１時間の出来高"+str(one_hour_volume),"1時間前の出来高"+str(ago_volume))
             
        
