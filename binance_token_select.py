@@ -62,7 +62,7 @@ def btc_and_eth(symbol):
                         +"volume%:"+str(volume_persent)
                     }
                     ]
-    slack = slackweb.Slack(url="https://hooks.slack.com/services/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")
+    slack = slackweb.Slack(url=slack_url)
     slack.notify(
 
         username="volumeBot",
