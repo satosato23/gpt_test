@@ -14,7 +14,7 @@ dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
 
-
+slack_url=os.environ["SLACK_URL"]
 api_key = os.environ.get("BINANCE_API")
 api_secret = os.environ.get("BINANCE_SECRET")
 client = Client(api_key, api_secret)
@@ -126,7 +126,7 @@ def main():
                         +"volume%:"+str(volume_persent)
                     }
                     ]
-                    slack = slackweb.Slack(url="https://hooks.slack.com/services/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")
+                    slack = slackweb.Slack(url=slack_url)
                     slack.notify(
 
                         username="volumeBot",
